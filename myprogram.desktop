@@ -1,0 +1,6 @@
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=myprogram
+Exec=lxterminal -e bash -c 'python3 /home/pi/detect.py;$SHELL'
+Terminal=true

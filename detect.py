@@ -79,6 +79,7 @@ def cameraphotos():
     t0=time.time()
     node=uuid.getnode()
     mac=uuid.UUID(int=node).hex[-12:]
+    
     a=subprocess.getoutput("fswebcam --no-banner -r 640x480 "+mac+".jpg")
     
     print(a)

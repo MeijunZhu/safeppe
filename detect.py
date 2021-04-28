@@ -44,7 +44,10 @@ def startWatch(m,s):
 
 
 def playvoice():
-    os.system('omxplayer -o local jinbao.mp3')
+    try:
+        os.system('omxplayer -o local jinbao.mp3')
+    except os.error as e:
+        print(str(e))
        
 def playvoice1():
     os.system('omxplayer -o local helmetandvest.mp3')
@@ -79,11 +82,11 @@ def cameraphotos():
     a=subprocess.getoutput("fswebcam --no-banner -r 640x480 "+mac+".jpg")
     
     print(a)
-    path=r'/home/pi/'+mac+'.jpg'
+    path=r'/home/pi/dist/'+mac+'.jpg'
     
     if os.path.exists(path):
         url = "http://10.186.162.179:8080/test/"
-        path_file0="/home/pi/"+mac+".jpg"
+        path_file0="/home/pi/dist/"+mac+".jpg"
         files = {'file0':open(path_file0,'rb')}
         try:
             result = requests.post(url=url,files=files)

@@ -1,0 +1,7 @@
+cd /opt/intel/openvino_2021/deployment_tools/inference_engine/samples/build
+./armv7l/Release/object_detection_sample_ssd -m face-detection-adas-0001.xml -d MYRIAD -i /home/pi/Downloads/image1.jpg
+
+https://segmentfault.com/a/1190000027079852
+
+
+http://wsh2xf.cn/index.aspx?id=SDSCgPlDQO
